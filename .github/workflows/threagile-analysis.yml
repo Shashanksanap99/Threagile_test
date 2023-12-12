@@ -24,7 +24,7 @@ jobs:
           ls -l /github/workspace  # Explicitly list contents of the workspace directory
 
       - name: Change Directory
-        run: cd /github/workspace  # Change to the workspace directory
+        run: cd /Threagile_test  # Change to the workspace directory
 
       - name: Run Threagile Analysis
         run: threagile /github/workspace/Threagile.yaml  # Provide full path to the Threagile.yaml file
