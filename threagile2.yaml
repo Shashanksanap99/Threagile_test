@@ -8,82 +8,82 @@ management_summary_comment: >
   This document intend to analyze the
   cloudformationAnalysis for infrastructure as code
 
-  business_criticality: important title: Cloudformation-based Threat Model reportBackground: >
-    This threat model is based on a hypothetical cloudformation template.
+business_criticality: important 
 
-  contributions:
-    title: Contributions to Threat Modeling
-    descriptions:
-      - Our template uses several AWS services to demonstrate various security issues.
+contributions:
+  title: Contributions to Threat Modeling
+  descriptions:
+    - Our template uses several AWS services to demonstrate various security issues.
 
-  architectureTradeOffs:
-    title: Architecture Trade-Offs
-    descriptions:
-      - By splitting data and management responsibilities, we introduce additional security risks.
+architectureTradeOffs:
+  title: Architecture Trade-Offs
+  descriptions:
+    - By splitting data and management responsibilities, we introduce additional security risks.
 
-  dataFlowDiagramSources:
-    - source: Cloudtemplate1.yaml
+dataFlowDiagramSources:
+  - source: Cloudtemplate1.yaml
 
-  dataFlowDiagram: sources:
-    - file: Cloudtemplate1.yaml
+dataFlowDiagram: sources:
+  - file: Cloudtemplate1.yaml
 
-  stakeholders:
-    - title: System Owner
-    description: This is the main point of contact for the system.
+stakeholders:
+  - title: System Owner
+  description: This is the main point of contact for the system.
 
-  dataStores:
-    - title: Data Store 1
-    description: This is an example data store.
+dataStores:
+  - title: Data Store 1
+  description: This is an example data store.
 
-  technicalAssets:
-    - title: Technical Asset 1
-    description: This is an example technical asset.
+technicalAssets:
+  - title: Technical Asset 1
+  description: This is an example technical asset.
 
-  externalCommunications:
-    - title: External Communication 1
-    description: This is an example external communication.
+externalCommunications:
+  - title: External Communication 1
+  description: This is an example external communication.
 
-  trustBoundaries:
-    - title: Trust Boundary 1
-    description: This is an example trust boundary.
+trustBoundaries:
+  - title: Trust Boundary 1
+  description: This is an example trust boundary.
 
-  dataFlows:
-    - title: Data Flow 1
-    description: This is an example data flow.
+dataFlows:
+  - title: Data Flow 1
+  description: This is an example data flow.
 
-  sharedRuntimes:
-    - title: Shared Runtime 1
-    description: This is an example shared runtime.
+sharedRuntimes:
+  - title: Shared Runtime 1
+  description: This is an example shared runtime.
 
-  threatGeneration:
-   strategies:
-    - allPossibleThreats
-    - definedProcess
-    - createdProcess
-    - adversaryDriven
-    - uniqueForThreagile
+threatGeneration:
+  strategies:
+  - allPossibleThreats
+  - definedProcess
+  - createdProcess
+  - adversaryDriven
+  - uniqueForThreagile
 
-  threatRating:
-   criteria:
-    - dataValue
-    - trustBoundaryConfidentiality
-    - integrityImpact
-    - availabilityImpact
-    - sensitivityImpact
+threatRating:
+  criteria:
+  - dataValue
+  - trustBoundaryConfidentiality
+  - integrityImpact
+  - availabilityImpact
+  - sensitivityImpact
 
-  threatExposure:
-    filters:
-    - skipDataStoreStored
-    - skipTechnicalAssetOutOfScope
+threatExposure:
+  filters:
+  - skipDataStoreStored
+  - skipTechnicalAssetOutOfScope
 
-  threatDetectionMethods:
-    title: Threat Detection Methods
-    descriptions:
-    - All data flows within this model are potential candidates for security events.
+threatDetectionMethods:
+  title: Threat Detection Methods
+  descriptions:
+  - All data flows within this model are potential candidates for security events.
 
-  threatSinks:
-    - title: Threat Sink 1
-    description: This is an example threat sink.
+threatSinks:
+  - title: Threat Sink 1
+  description: This is an example threat sink.
+
 risks:
   title: Identified Risks
   descriptions:
