@@ -82,8 +82,8 @@ tags_available:
   - aws:s3
 data_assets:
   Database Customizing and Dumps:
-    id: 12345
-    technical_assets: ["Apache Webserver"]
+    # id: 12345
+    # technical_assets: ["Apache Webserver"]
     id: public-subnet-data
     description: Public Subnet Data
     usage: devops
@@ -126,7 +126,7 @@ technical_assets:
     multi_tenant: false
     redundant: false
     custom_developed_parts: true
-    data_assets_processed: ["12345"]
+    data_assets_processed: 12345
     data_assets_stored:
       - 12345
     data_formats_accepted:
