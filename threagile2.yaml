@@ -1,0 +1,105 @@
+---
+threagile_version: 1.0.0
+title: Cloud Formation Analysis
+date: 2023-12-12
+author:
+  name: shashank sanap
+management_summary_comment: >
+  This document intend to analyze the
+  cloudformationAnalysis for infrastructure as code
+
+  business_criticality: important title: Cloudformation-based Threat Model reportBackground: >
+    This threat model is based on a hypothetical cloudformation template.
+
+  contributions:
+    title: Contributions to Threat Modeling
+    descriptions:
+      - Our template uses several AWS services to demonstrate various security issues.
+
+  architectureTradeOffs:
+    title: Architecture Trade-Offs
+    descriptions:
+      - By splitting data and management responsibilities, we introduce additional security risks.
+
+  dataFlowDiagramSources:
+    - source: Cloudtemplate1.yaml
+
+  dataFlowDiagram: sources:
+    - file: Cloudtemplate1.yaml
+
+  stakeholders:
+    - title: System Owner
+    description: This is the main point of contact for the system.
+
+  dataStores:
+    - title: Data Store 1
+    description: This is an example data store.
+
+  technicalAssets:
+    - title: Technical Asset 1
+    description: This is an example technical asset.
+
+  externalCommunications:
+    - title: External Communication 1
+    description: This is an example external communication.
+
+  trustBoundaries:
+    - title: Trust Boundary 1
+    description: This is an example trust boundary.
+
+  dataFlows:
+    - title: Data Flow 1
+    description: This is an example data flow.
+
+  sharedRuntimes:
+    - title: Shared Runtime 1
+    description: This is an example shared runtime.
+
+  threatGeneration:
+   strategies:
+    - allPossibleThreats
+    - definedProcess
+    - createdProcess
+    - adversaryDriven
+    - uniqueForThreagile
+
+  threatRating:
+   criteria:
+    - dataValue
+    - trustBoundaryConfidentiality
+    - integrityImpact
+    - availabilityImpact
+    - sensitivityImpact
+
+  threatExposure:
+    filters:
+    - skipDataStoreStored
+    - skipTechnicalAssetOutOfScope
+
+  threatDetectionMethods:
+    title: Threat Detection Methods
+    descriptions:
+    - All data flows within this model are potential candidates for security events.
+
+  threatSinks:
+    - title: Threat Sink 1
+    description: This is an example threat sink.
+risks:
+  title: Identified Risks
+  descriptions:
+    - All data flows within this model are potential candidates for security
+      events.
+impactedProcesses:
+  title: Impacted Processes
+  descriptions:
+    - This risk could impact various business processes.
+recommendations:
+  title: Recommendations
+  descriptions:
+    - It is recommended to apply security controls and policies to protect
+      sensitive data.
+notes:
+  title: Notes
+  descriptions:
+    - This threat model serves as a starting point for more detailed threat
+      modeling efforts.
