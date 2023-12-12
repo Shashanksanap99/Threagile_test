@@ -126,7 +126,7 @@ technical_assets:
     custom_developed_parts: true
     data_assets_processed: ["12345"]
     data_assets_stored:
-      - client-application-code
+      - 12345
     data_formats_accepted:
       - json
       - file
