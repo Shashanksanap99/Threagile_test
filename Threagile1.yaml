@@ -102,8 +102,8 @@ data_assets:
       Data for public_subnet of the DB system, which might include full database of public subnet.
 
 technical_assets:
-  AWS Webserver:
-    id: aws-vpc
+  Apache Webserver:
+    id: apache-webserver
     #diagram_tweak_order: 0 # affects left to right positioning (only within a trust boundary)
     description: Aws Webserver hosting the server side code and client-side code
     type: process # values: external-entity, process, datastore
