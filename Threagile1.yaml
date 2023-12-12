@@ -142,7 +142,7 @@ technical_assets:
         ip_filtered: false
         readonly: false
         usage: business
-        data_assets_sent: internal-business-data
+        data_assets_sent: ["internal-business-data-87"]
         data_assets_received: ["customer-operational-data-55"]
       Auth Credential Check Traffic:
         target: identity-provider
@@ -155,5 +155,5 @@ technical_assets:
         ip_filtered: false
         readonly: false
         usage: business
-        data_assets_sent: customer-accounts
-        data_assets_received: 01234
+        data_assets_sent: ["customer-accounts-6778876"]
+        data_assets_received: ["01234"]
