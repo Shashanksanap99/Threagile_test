@@ -102,10 +102,11 @@ data_assets:
       Data for public_subnet of the DB system, which might include full database of public subnet.
 
 technical_assets:
+
   Apache Webserver:
     id: apache-webserver
     #diagram_tweak_order: 0 # affects left to right positioning (only within a trust boundary)
-    description: Aws Webserver hosting the server side code and client-side code
+    description: apache Webserver hosting the server side code and client-side code
     type: process # values: external-entity, process, datastore
     usage: business # values: business, devops
     used_as_client_by_human: false
@@ -115,7 +116,8 @@ technical_assets:
     technology: web-server # values: see help
     tags:
       - linux
-      - aws
+      - apache
+      - aws:ec2
     internet: true
     machine: container # values: physical, virtual, container, serverless
     encryption: none # values: none, transparent, data-with-symmetric-shared-key, data-with-asymmetric-shared-key, data-with-enduser-individual-key
