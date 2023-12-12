@@ -1,3 +1,4 @@
+---
 threagile_version: 1.0.0
 title: Cloud Formation Analysis
 date: 2023-12-12
@@ -10,115 +11,101 @@ management_summary_comment: >
 business_criticality: important
 business_overview:
   description: Architecture used by ABC company
-  # images: null
 technical_overview:
   description: Contains VPC and EC2 instances connected with public and Private subnet
-  # images: null
-  
- model_layers:
-    -
-      id: internet
-      name: Internet
-      out_of_scope: true
-      type: data_source
-      threats: []
-
-    -
-      id: public_subnet
-      name: Public Subnet
-      out_of_scope: false
-      type: network
-      threats:
-        -
-          title: Unauthorized Access to Public Subnet
-          type: unauthorized_access
-          details: |
-            Unauthorized users may access the public subnet, potentially leading to unauthorized access to resources within the subnet.
-          data_breach:
-            risk: low
-            impact: |
-              Limited unauthorized access to public resources may not result in a data breach.
-
-        -
-          title: Misconfiguration in Security Groups
-          type: misconfiguration
-          details: |
-            Security groups misconfigurations may lead to unauthorized access to resources within the public subnet.
-          data_breach:
-            risk: medium
-            impact: |
-              An unauthorized access vulnerability could potentially result in a data breach, depending on the nature of the compromised resource.
-
- identified_technical_assets:
-    -
-      id: vpc
-      name: Virtual Private Cloud (VPC)
-      technical_asset_type: infrastructure
-      data_breach_technical_asset_id: vpc
-      in_scope: true
-      uses_data_assets: []
-      uses_memory_store_cache: false
-      threat_ids_mitigated_by_function: []
-      threat_ids_mitigated_by_tech: []
-
-    -
-      id: public_subnet
-      name: Public Subnet
-      technical_asset_type: infrastructure
-      data_breach_technical_asset_id: public_subnet
-      in_scope: true
-      uses_data_assets: []
-      uses_memory_store_cache: false
-      threat_ids_mitigated_by_function: []
-      threat_ids_mitigated_by_tech: []
-
-    -
-      id: ec2_instance
-      name: EC2 Instance
-      technical_asset_type: compute
-      data_breach_technical_asset_id: ec2_instance
-      in_scope: true
-      uses_data_assets: []
-      uses_memory_store_cache: false
-      threat_ids_mitigated_by_function: []
-      threat_ids_mitigated_by_tech: []
-
- identified_data_assets:
-    -
-      id: public_subnet_data
-      name: Public Subnet Data
-      technical_asset_id: public_subnet
-      sensitivity: low
-      category: infrastructure
-      is_client_asset: false
-      size_in_gb: 0.0001
-      risk_ranking: medium
-      impact: |
-        Loss or unauthorized access to this data could potentially lead to loss of confidentiality, integrity, or availability.
-      breach_scenario: |
-        An attacker gains unauthorized access to the public subnet and manipulates its data.
-      breach_probability:
-        overall_probability: high
-        exploitation_likelihood: medium
-        remediation_likelihood: medium
-      attackers: []
-      identified_data_breaches: []
-      data_breach_probability:
-        overall_probability: high
-        exploitation_likelihood: medium
-        remediation_likelihood: medium
-      breach_target_risk_rating: medium
-
-    -
-      id: ec2_instance_data
-      name: EC2 Instance Data
-      technical_asset_id: ec2_instance
-      sensitivity: low
-      category: compute
-      is_client_asset: false
-      size_in_gb: 0.0001
-      risk_ranking: medium
-      impact: |
-        Loss or unauthorized access to this data could potentially lead to loss of confidentiality, integrity, or availability 
-
-###
+model_layers:
+  - id: internet
+    name: Internet
+    out_of_scope: true
+    type: data_source
+    threats: []
+  - id: public_subnet
+    name: Public Subnet
+    out_of_scope: false
+    type: network
+    threats:
+      - title: Unauthorized Access to Public Subnet
+        type: unauthorized_access
+        details: >
+          Unauthorized users may access the public subnet, potentially leading to
+          unauthorized access to resources within the subnet.
+        data_breach:
+          risk: low
+          impact: >
+            Limited unauthorized access to public resources may not result in a data
+            breach.
+      - title: Misconfiguration in Security Groups
+        type: misconfiguration
+        details: >
+          Security groups misconfigurations may lead to unauthorized access to
+          resources within the public subnet.
+        data_breach:
+          risk: medium
+          impact: >
+            An unauthorized access vulnerability could potentially result in a data
+            breach, depending on the nature of the compromised resource.
+identified_technical_assets:
+  - id: vpc
+    name: Virtual Private Cloud (VPC)
+    technical_asset_type: infrastructure
+    data_breach_technical_asset_id: vpc
+    in_scope: true
+    uses_data_assets: []
+    uses_memory_store_cache: false
+    threat_ids_mitigated_by_function: []
+    threat_ids_mitigated_by_tech: []
+  - id: public_subnet
+    name: Public Subnet
+    technical_asset_type: infrastructure
+    data_breach_technical_asset_id: public_subnet
+    in_scope: true
+    uses_data_assets: []
+    uses_memory_store_cache: false
+    threat_ids_mitigated_by_function: []
+    threat_ids_mitigated_by_tech: []
+  - id: ec2_instance
+    name: EC2 Instance
+    technical_asset_type: compute
+    data_breach_technical_asset_id: ec2_instance
+    in_scope: true
+    uses_data_assets: []
+    uses_memory_store_cache: false
+    threat_ids_mitigated_by_function: []
+    threat_ids_mitigated_by_tech: []
+identified_data_assets:
+  - id: public_subnet_data
+    name: Public Subnet Data
+    technical_asset_id: public_subnet
+    sensitivity: low
+    category: infrastructure
+    is_client_asset: false
+    size_in_gb: 0.0001
+    risk_ranking: medium
+    impact: >
+      Loss or unauthorized access to this data could potentially lead to loss
+      of confidentiality, integrity, or availability.
+    breach_scenario: >
+      An attacker gains unauthorized access to the public subnet and
+      manipulates its data.
+    breach_probability:
+      overall_probability: high
+      exploitation_likelihood: medium
+      remediation_likelihood: medium
+    attackers: []
+    identified_data_breaches: []
+    data_breach_probability:
+      overall_probability: high
+      exploitation_likelihood: medium
+      remediation_likelihood: medium
+    breach_target_risk_rating: medium
+  - id: ec2_instance_data
+    name: EC2 Instance Data
+    technical_asset_id: ec2_instance
+    sensitivity: low
+    category: compute
+    is_client_asset: false
+    size_in_gb: 0.0001
+    risk_ranking: medium
+    impact: >
+      Loss or unauthorized access to this data could potentially lead to loss
+      of confidentiality, integrity, or availability 
