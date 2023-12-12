@@ -20,11 +20,11 @@ architectureTradeOffs:
   descriptions:
     - By splitting data and management responsibilities, we introduce additional security risks.
 
-dataFlowDiagramSources:
-  - source: Cloudtemplate1.yaml
+# dataFlowDiagramSources:
+#   - source: Cloudtemplate1.yaml
 
-dataFlowDiagram: sources:
-  - file: Cloudtemplate1.yaml
+# dataFlowDiagram: sources:
+#   - file: Cloudtemplate1.yaml
 
 stakeholders:
   - title: System Owner
