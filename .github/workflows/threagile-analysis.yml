@@ -27,7 +27,7 @@ jobs:
         run: cd /Threagile_test  # Change to the workspace directory
 
       - name: Run Threagile Analysis
-        run: threagile /github/workspace/Threagile.yaml  # Provide full path to the Threagile.yaml file
+        run: threagile Threagile.yaml  # Provide full path to the Threagile.yaml file
 
       - name: Archive Threagile Reports
         uses: actions/upload-artifact@v2
