@@ -23,7 +23,7 @@ jobs:
           go install github.com/threagile/threagile@latest
 
       - name: Navigate to Repository Directory
-        run: cd $GITHUB_WORKSPACE  # Ensure you're in the repository root
+        run: cd ./Threagile_test  # Ensure you're in the repository root
 
       - name: Run Threagile Analysis
         run: threagile Threagile.yaml
