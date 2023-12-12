@@ -82,7 +82,7 @@ tags_available:
   - aws:s3
 data_assets:
   Database Customizing and Dumps:
-    - id: 12345
+    id: 12345
     technical_assets: ["Apache Webserver"]
     id: public-subnet-data
     description: Public Subnet Data
