@@ -23,7 +23,7 @@ jobs:
           go install github.com/threagile/threagile@latest
 
       - name: Run Threagile Analysis
-        run: threagile -config-path Threagile.yml
+        run: threagile Threagile.yml
 
       - name: Archive Threagile Reports
         uses: actions/upload-artifact@v2
