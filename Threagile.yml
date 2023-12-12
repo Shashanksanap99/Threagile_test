@@ -1,0 +1,35 @@
+model:
+  name: "MyCloudFormationArchitecture"
+  description: "Security analysis of the CloudFormation template"
+  cloudProvider: "AWS"
+  regions:
+    - name: "us-east-1"  # Replace with your region
+
+  components:
+    - type: "Network"
+      name: "MyVPC"
+      description: "VPC in CloudFormation"
+      tags: ["VPC"]
+
+    - type: "Subnet"
+      name: "MyPublicSubnet"
+      description: "Public subnet in CloudFormation"
+      tags: ["PublicSubnet"]
+
+    - type: "EC2Instance"
+      name: "MyEC2Instance"
+      description: "EC2 instance in CloudFormation"
+      tags: ["EC2"]
+
+    # Define more components as needed for your architecture
+
+rules:
+  # Define security rules and checks relevant to your architecture
+  - id: "1"
+    category: "Network Segmentation"
+    description: "Ensure proper network segmentation between subnets"
+    severity: "High"
+    appliesToTypes: ["Subnet"]
+    requiredComponents:
+      - "MyVPC"
+      - "MyPublicSubnet"
