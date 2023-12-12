@@ -81,7 +81,7 @@ threatDetectionMethods:
   - All data flows within this model are potential candidates for security events.
 
 threatSinks:
-  - title: Threat Sink 1
+  title: Threat Sink 1
   description: This is an example threat sink.
 
 risks:
