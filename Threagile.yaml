@@ -1,4 +1,20 @@
-threagile:
+threagile_version: 1.0.0
+title: Cloud Formation Analysis
+date: 2023-12-12
+author:
+  name: shashank sanap
+  homepage: www.cloudformationAnalysis.com
+management_summary_comment: >
+  This document intend to analyze the
+  cloudformationAnalysis for infrastructure as code
+business_criticality: important
+business_overview:
+  description: Architecture used by ABC company
+  # images: null
+technical_overview:
+  description: Contains VPC and EC2 instances connected with public and Private subnet
+  # images: null
+  
  model_layers:
     -
       id: internet
