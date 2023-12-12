@@ -23,6 +23,7 @@ jobs:
           go install github.com/threagile/threagile@latest
 
       - name: Run Threagile Analysis
+          cd ./Threagile.yaml
         run: threagile Threagile.yaml
 
       - name: Archive Threagile Reports
