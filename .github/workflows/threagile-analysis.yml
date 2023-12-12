@@ -23,11 +23,15 @@ jobs:
     #       ls -l
     #       ls -l /github/workspace  # Explicitly list contents of the workspace directory
 
-      - name: Change Directory
-        run: cd /Threagile_test  # Change to the workspace directory
+    #   - name: Change Directory
+    #     run: cd /Threagile_test  # Change to the workspace directory
 
       - name: Run Threagile Analysis
-        run: threagile Threagile.yaml  # Provide full path to the Threagile.yaml file
+        id: threagile
+        uses: threagile/run-threagile-action@v1
+        with:
+         model-file: 'threagile.yaml'
+        # run: threagile Threagile.yaml  # Provide full path to the Threagile.yaml file
 
       - name: Archive Threagile Reports
         uses: actions/upload-artifact@v2
