@@ -87,7 +87,7 @@ tags_available:
 
 data_assets:
   Database Customizing and Dumps:
-    id: public_subnet_data
+    id: public-subnet-data
     description: Public Subnet Data
     usage: devops # values: business, devops
     tags:
