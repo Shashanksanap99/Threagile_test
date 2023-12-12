@@ -98,64 +98,64 @@ data_assets:
     justification_cia_rating: >
       Data for public_subnet of the DB system, which might
       include full database of public subnet.
-technical_assets:
-  Apache Webserver:
-    id: apache-webserver
-    description: apache Webserver hosting the server side code and client-side code
-    type: process
-    usage: business
-    used_as_client_by_human: false
-    out_of_scope: false
-    justification_out_of_scope: null
-    size: application
-    technology: web-server
-    tags:
-      - linux
-      - apache
-      - aws:ec2
-    internet: true
-    machine: container
-    encryption: none
-    owner: Company ABC
-    confidentiality: internal
-    integrity: critical
-    availability: critical
-    justification_cia_rating: >
-      The correct configuration and reachability of the web
-      server is mandatory for all customer usages of the portal.
-    multi_tenant: false
-    redundant: false
-    custom_developed_parts: true
-    data_assets_processed: [12345]
-    data_assets_stored:
-      - 12345
-    data_formats_accepted:
-      - json
-      - file
-    communication_links:
-      ERP System Traffic:
-        target: erp-system
-        description: Link to the ERP system
-        protocol: https
-        authentication: token
-        authorization: technical-user
-        tags: null
-        vpn: false
-        ip_filtered: false
-        readonly: false
-        usage: business
-        data_assets_sent: ["internal-business-data-87"]
-        data_assets_received: ["customer-operational-data-55"]
-      Auth Credential Check Traffic:
-        target: identity-provider
-        description: Link to the identity provider server
-        protocol: https
-        authentication: credentials
-        authorization: technical-user
-        tags: null
-        vpn: false
-        ip_filtered: false
-        readonly: false
-        usage: business
-        data_assets_sent: ["customer-accounts-6778876"]
-        data_assets_received: ["01234"]
+# technical_assets:
+#   Apache Webserver:
+#     id: apache-webserver
+#     description: apache Webserver hosting the server side code and client-side code
+#     type: process
+#     usage: business
+#     used_as_client_by_human: false
+#     out_of_scope: false
+#     justification_out_of_scope: null
+#     size: application
+#     technology: web-server
+#     tags:
+#       - linux
+#       - apache
+#       - aws:ec2
+#     internet: true
+#     machine: container
+#     encryption: none
+#     owner: Company ABC
+#     confidentiality: internal
+#     integrity: critical
+#     availability: critical
+#     justification_cia_rating: >
+#       The correct configuration and reachability of the web
+#       server is mandatory for all customer usages of the portal.
+#     multi_tenant: false
+#     redundant: false
+#     custom_developed_parts: true
+#     data_assets_processed: [12345]
+#     data_assets_stored:
+#       - 12345
+#     data_formats_accepted:
+#       - json
+#       - file
+#     communication_links:
+#       ERP System Traffic:
+#         target: erp-system
+#         description: Link to the ERP system
+#         protocol: https
+#         authentication: token
+#         authorization: technical-user
+#         tags: null
+#         vpn: false
+#         ip_filtered: false
+#         readonly: false
+#         usage: business
+#         data_assets_sent: ["internal-business-data-87"]
+#         data_assets_received: ["customer-operational-data-55"]
+#       Auth Credential Check Traffic:
+#         target: identity-provider
+#         description: Link to the identity provider server
+#         protocol: https
+#         authentication: credentials
+#         authorization: technical-user
+#         tags: null
+#         vpn: false
+#         ip_filtered: false
+#         readonly: false
+#         usage: business
+#         data_assets_sent: ["customer-accounts-6778876"]
+#         data_assets_received: ["01234"]
