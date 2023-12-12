@@ -1,6 +1,3 @@
-#
-# Example threagile.yaml file for a sample cloudformation template
-#
 threagile:
  model_layers:
     -
@@ -19,6 +16,7 @@ threagile:
         -
           title: Unauthorized Access to Public Subnet
           type: unauthorized_access
+          business_criticality: important
           details: |
             Unauthorized users may access the public subnet, potentially leading to unauthorized access to resources within the subnet.
           data_breach:
@@ -29,6 +27,7 @@ threagile:
         -
           title: Misconfiguration in Security Groups
           type: misconfiguration
+          business_criticality: important
           details: |
             Security groups misconfigurations may lead to unauthorized access to resources within the public subnet.
           data_breach:
@@ -106,4 +105,6 @@ threagile:
       size_in_gb: 0.0001
       risk_ranking: medium
       impact: |
-        Loss or unauthorized access to this data could potentially lead to loss of confidentiality, integrity, or availability
+        Loss or unauthorized access to this data could potentially lead to loss of confidentiality, integrity, or availability 
+
+###

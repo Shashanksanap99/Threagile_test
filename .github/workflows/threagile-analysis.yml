@@ -1,12 +1,12 @@
 name: Threagile Security Analysis
 
 on:
-  push:
+ push:
     branches:
       - main
 
 jobs:
-  threagile-analysis:
+ threagile-analysis:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,23 +18,14 @@ jobs:
         with:
           go-version: '1.20'
 
-    #   - name: List Directory Contents
-    #     run: |
-    #       ls -l
-    #       ls -l /github/workspace  # Explicitly list contents of the workspace directory
-
-    #   - name: Change Directory
-    #     run: cd /Threagile_test  # Change to the workspace directory
-
       - name: Run Threagile Analysis
         id: threagile
         uses: threagile/run-threagile-action@v1
         with:
-         model-file: 'Threagile.yaml'
-        # run: threagile Threagile.yaml  # Provide full path to the Threagile.yaml file
+          model-file: 'Threagile.yaml'
 
       - name: Archive Threagile Reports
         uses: actions/upload-artifact@v2
         with:
           name: threagile-reports
-          path: threagile_reports  # Update this path according to your report directory
+          path: threagile_reports # Update this path according to your report directory
