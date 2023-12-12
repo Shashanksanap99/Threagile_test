@@ -18,18 +18,16 @@ jobs:
         with:
           go-version: '1.20'
 
-      - name: Install Threagile
-        run: |
-          go install github.com/threagile/threagile@latest
-
-      - name: Navigate to Repository Directory
-        run: cd $GITHUB_WORKSPACE  # Ensure you're in the repository root
-
       - name: List Directory Contents
-        run: ls -l  # Check the contents to verify the presence of Threagile.yaml
+        run: |
+          ls -l
+          ls -l /github/workspace  # Explicitly list contents of the workspace directory
+
+      - name: Change Directory
+        run: cd /github/workspace  # Change to the workspace directory
 
       - name: Run Threagile Analysis
-        run: threagile Threagile.yaml
+        run: threagile /github/workspace/Threagile.yaml  # Provide full path to the Threagile.yaml file
 
       - name: Archive Threagile Reports
         uses: actions/upload-artifact@v2
