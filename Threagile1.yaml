@@ -124,10 +124,9 @@ technical_assets:
     multi_tenant: false
     redundant: false
     custom_developed_parts: true
-    data_assets_processed: client-application-code
+    data_assets_processed: ["client-application-code-12345"]
     data_assets_stored:
       - client-application-code
-      - server-application-code
     data_formats_accepted:
       - json
       - file
@@ -144,7 +143,7 @@ technical_assets:
         readonly: false
         usage: business
         data_assets_sent: internal-business-data
-        data_assets_received: customer-operational-data
+        data_assets_received: ["customer-operational-data-55"]
       Auth Credential Check Traffic:
         target: identity-provider
         description: Link to the identity provider server
@@ -157,4 +156,4 @@ technical_assets:
         readonly: false
         usage: business
         data_assets_sent: customer-accounts
-        data_assets_received: null
+        data_assets_received: 01234
