@@ -27,31 +27,31 @@ architectureTradeOffs:
 #   - file: Cloudtemplate1.yaml
 
 stakeholders:
-  - title: System Owner
+  title: System Owner
   description: This is the main point of contact for the system.
 
 dataStores:
-  - title: Data Store 1
+  title: Data Store 1
   description: This is an example data store.
 
 technicalAssets:
-  - title: Technical Asset 1
+  title: Technical Asset 1
   description: This is an example technical asset.
 
 externalCommunications:
-  - title: External Communication 1
+  title: External Communication 1
   description: This is an example external communication.
 
 trustBoundaries:
-  - title: Trust Boundary 1
+  title: Trust Boundary 1
   description: This is an example trust boundary.
 
 dataFlows:
-  - title: Data Flow 1
+  title: Data Flow 1
   description: This is an example data flow.
 
 sharedRuntimes:
-  - title: Shared Runtime 1
+  title: Shared Runtime 1
   description: This is an example shared runtime.
 
 threatGeneration:
