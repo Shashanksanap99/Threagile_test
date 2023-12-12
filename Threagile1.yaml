@@ -126,7 +126,7 @@ technical_assets:
     multi_tenant: false
     redundant: false
     custom_developed_parts: true
-    data_assets_processed: 12345
+    data_assets_processed: [12345]
     data_assets_stored:
       - 12345
     data_formats_accepted:
