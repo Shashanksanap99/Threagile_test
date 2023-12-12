@@ -11,10 +11,10 @@ management_summary_comment: >
 business_criticality: important
 business_overview:
   description: Architecture used by ABC company
-  images: null
+  # images: null
 technical_overview:
   description: Contains VPC and EC2 instances connected with public and Private subnet
-  images: null
+  # images: null
 questions:
   How are the admin clients managed/protected against compromise?: ""
   How are the development clients managed/protected against compromise?: |
@@ -82,8 +82,6 @@ tags_available:
   - aws:s3
 data_assets:
   Database Customizing and Dumps:
-    # id: 12345
-    # technical_assets: ["Apache Webserver"]
     id: public-subnet-data
     description: Public Subnet Data
     usage: devops

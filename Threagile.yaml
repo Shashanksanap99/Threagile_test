@@ -16,7 +16,6 @@ threagile:
         -
           title: Unauthorized Access to Public Subnet
           type: unauthorized_access
-          business_criticality: important
           details: |
             Unauthorized users may access the public subnet, potentially leading to unauthorized access to resources within the subnet.
           data_breach:
@@ -27,7 +26,6 @@ threagile:
         -
           title: Misconfiguration in Security Groups
           type: misconfiguration
-          business_criticality: important
           details: |
             Security groups misconfigurations may lead to unauthorized access to resources within the public subnet.
           data_breach:
