@@ -124,7 +124,7 @@ technical_assets:
     multi_tenant: false
     redundant: false
     custom_developed_parts: true
-    data_assets_processed: ["client-application-code-12345"]
+    # data_assets_processed: ["client-application-code-12345"]
     data_assets_stored:
       - client-application-code
     data_formats_accepted:
