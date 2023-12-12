@@ -1,3 +1,5 @@
+threagile_version: 1.0.0
+
 model:
   name: "MyCloudFormationArchitecture"
   description: "Security analysis of the CloudFormation template"
@@ -10,19 +12,19 @@ components:
     name: "MyVPC"
     description: "VPC in CloudFormation"
     tags: ["VPC"]
-    business_criticality: "High"  # Added business_criticality for components
+    business_criticality: "important"  # Added business_criticality for components
 
   - type: "Subnet"
     name: "MyPublicSubnet"
     description: "Public subnet in CloudFormation"
     tags: ["PublicSubnet"]
-    business_criticality: "Medium"  # Added business_criticality for components
+    business_criticality: "important"  # Added business_criticality for components
 
   - type: "EC2Instance"
     name: "MyEC2Instance"
     description: "EC2 instance in CloudFormation"
     tags: ["EC2"]
-    business_criticality: "Low"  # Added business_criticality for components
+    business_criticality: "important"  # Added business_criticality for components
 
 rules:
   - id: "1"
@@ -30,4 +32,4 @@ rules:
     description: "Ensure proper network segmentation between subnets"
     severity: "High"
     appliesToTypes: ["Subnet"]
-    business_criticality: "High"  # Added business_criticality for rules
+    business_criticality: "important"  # Added business_criticality for rules
