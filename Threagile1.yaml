@@ -1,75 +1,71 @@
+---
 threagile_version: 1.0.0
-
 title: Cloud Formation Analysis
-
 date: 2023-12-12
-
 author:
   name: shashank sanap
   homepage: www.cloudformationAnalysis.com
-
 management_summary_comment: >
-  This document intend to analyze the cloudformationAnalysis for infrastructure as code
-
-business_criticality: important # values: archive, operational, important, critical, mission-critical
-
+  This document intend to analyze the
+  cloudformationAnalysis for infrastructure as code
+business_criticality: important
 business_overview:
   description: Architecture used by ABC company
-  images:
-#    - custom-image-1.png: Some dummy image 1
-#    - custom-image-2.png: Some dummy image 2
-
+  images: null
 technical_overview:
   description: Contains VPC and EC2 instances connected with public and Private subnet
-  images:
-#    - custom-image-1.png: Some dummy image 1
-#    - custom-image-2.png: Some dummy image 2
-
-questions: # simply use "" as answer to signal "unanswered"
+  images: null
+questions:
   How are the admin clients managed/protected against compromise?: ""
-  How are the development clients managed/protected against compromise?: >
+  How are the development clients managed/protected against compromise?: |
     Managed by shashank sanap
-  How are the build pipeline components managed/protected against compromise?: >
+  How are the build pipeline components managed/protected against compromise?: |
     Managed by pratik shelke
-
 abuse_cases:
   Denial-of-Service: >
-    As a hacker I want to disturb the functionality of the backend system in order to cause indirect
-    financial damage via unusable features.
+    As a hacker I want to disturb the functionality of the
+    backend system in order to cause indirect financial damage via unusable
+    features.
   CPU-Cycle Theft: >
-    As a hacker I want to steal CPU cycles in order to transform them into money via installed crypto currency miners.
+    As a hacker I want to steal CPU cycles in order to transform
+    them into money via installed crypto currency miners.
   Ransomware: >
-    As a hacker I want to encrypt the storage and file systems in order to demand ransom.
+    As a hacker I want to encrypt the storage and file systems in order
+    to demand ransom.
   Identity Theft: >
-    As a hacker I want to steal identity data in order to reuse credentials and/or keys on other targets of the same company or outside.
+    As a hacker I want to steal identity data in order to reuse
+    credentials and/or keys on other targets of the same company or outside.
   PII Theft: >
-    As a hacker I want to steal PII (Personally Identifiable Information) data in order to blackmail the company and/or damage
-    their repudiation by publishing them.
-
+    As a hacker I want to steal PII (Personally Identifiable Information)
+    data in order to blackmail the company and/or damage their repudiation by
+    publishing them.
   ERP-System Compromise: >
-    As a hacker I want to access the ERP-System in order to steal/modify sensitive business data.
+    As a hacker I want to access the ERP-System in order to
+    steal/modify sensitive business data.
   Database Compromise: >
-    As a hacker I want to access the database backend of the ERP-System in order to steal/modify sensitive
-    business data.
+    As a hacker I want to access the database backend of the
+    ERP-System in order to steal/modify sensitive business data.
   Contract Filesystem Compromise: >
-    As a hacker I want to access the filesystem storing the contract PDFs in order to steal/modify contract data.
+    As a hacker I want to access the filesystem
+    storing the contract PDFs in order to steal/modify contract data.
   Cross-Site Scripting Attacks: >
-    As a hacker I want to execute Cross-Site Scripting (XSS) and similar attacks in order to takeover victim sessions and
-    cause reputational damage.
+    As a hacker I want to execute Cross-Site Scripting
+    (XSS) and similar attacks in order to takeover victim sessions and cause
+    reputational damage.
   Denial-of-Service of Enduser Functionality: >
-    As a hacker I want to disturb the functionality of the enduser parts of the application in order to cause direct financial
-    damage (lower sales).
+    As a hacker I want to disturb the
+    functionality of the enduser parts of the application in order to cause
+    direct financial damage (lower sales).
   Denial-of-Service of ERP/DB Functionality: >
-    As a hacker I want to disturb the functionality of the ERP system and/or it's database in order to cause indirect
-    financial damage via unusable internal ERP features (not related to customer portal).
-
+    As a hacker I want to disturb the
+    functionality of the ERP system and/or it's database in order to cause
+    indirect financial damage via unusable internal ERP features (not related to
+    customer portal).
 security_requirements:
   Input Validation: Strict input validation is required to reduce the overall attack surface.
-  Securing Administrative Access: Administrative access must be secured with strong encryption and multi-factor authentication.
+  Securing Administrative Access: Administrative access must be secured with
+    strong encryption and multi-factor authentication.
   EU-DSGVO: Mandatory EU-Datenschutzgrundverordnung
-
-# Tags can be used for anything, it's just a tag. Also risk rules can act based on tags if you like.
-# Tags can be used for example to name the products used (which is more concrete than the technology types that only specify the type)
 tags_available:
   - linux
   - apache
@@ -84,99 +80,81 @@ tags_available:
   - aws
   - aws:ec2
   - aws:s3
-
 data_assets:
   Database Customizing and Dumps:
     id: public-subnet-data
     description: Public Subnet Data
-    usage: devops # values: business, devops
+    usage: devops
     tags:
       - aws:ec2
     origin: Company ABC
     owner: Company ABC
-    quantity: very-few # values: very-few, few, many, very-many
-    confidentiality: strictly-confidential # values: public, internal, restricted, confidential, strictly-confidential
-    integrity: critical # values: archive, operational, important, critical, mission-critical
-    availability: critical # values: archive, operational, important, critical, mission-critical
+    quantity: very-few
+    confidentiality: strictly-confidential
+    integrity: critical
+    availability: critical
     justification_cia_rating: >
-      Data for public_subnet of the DB system, which might include full database of public subnet.
-
+      Data for public_subnet of the DB system, which might
+      include full database of public subnet.
 technical_assets:
-
   Apache Webserver:
     id: apache-webserver
-    #diagram_tweak_order: 0 # affects left to right positioning (only within a trust boundary)
     description: apache Webserver hosting the server side code and client-side code
-    type: process # values: external-entity, process, datastore
-    usage: business # values: business, devops
+    type: process
+    usage: business
     used_as_client_by_human: false
     out_of_scope: false
-    justification_out_of_scope:
-    size: application # values: system, service, application, component
-    technology: web-server # values: see help
+    justification_out_of_scope: null
+    size: application
+    technology: web-server
     tags:
       - linux
       - apache
       - aws:ec2
     internet: true
-    machine: container # values: physical, virtual, container, serverless
-    encryption: none # values: none, transparent, data-with-symmetric-shared-key, data-with-asymmetric-shared-key, data-with-enduser-individual-key
+    machine: container
+    encryption: none
     owner: Company ABC
-    confidentiality: internal # values: public, internal, restricted, confidential, strictly-confidential
-    integrity: critical # values: archive, operational, important, critical, mission-critical
-    availability: critical # values: archive, operational, important, critical, mission-critical
+    confidentiality: internal
+    integrity: critical
+    availability: critical
     justification_cia_rating: >
-      The correct configuration and reachability of the web server is mandatory for all customer usages of the portal.
+      The correct configuration and reachability of the web
+      server is mandatory for all customer usages of the portal.
     multi_tenant: false
     redundant: false
     custom_developed_parts: true
-    data_assets_processed: client-application-code # sequence of IDs to reference
-      - customer-accounts
-      - customer-operational-data
-      - customer-contracts
-      - internal-business-data
+    data_assets_processed: client-application-code
+    data_assets_stored:
       - client-application-code
       - server-application-code
-    data_assets_stored: # sequence of IDs to reference
-      - client-application-code
-      - server-application-code
-    data_formats_accepted: # sequence of formats like: json, xml, serialization, file, csv
+    data_formats_accepted:
       - json
       - file
     communication_links:
       ERP System Traffic:
         target: erp-system
         description: Link to the ERP system
-        protocol: https # values: see help
-        authentication: token # values: none, credentials, session-id, token, client-certificate, two-factor
-        authorization: technical-user # values: none, technical-user, enduser-identity-propagation
-        tags:
+        protocol: https
+        authentication: token
+        authorization: technical-user
+        tags: null
         vpn: false
         ip_filtered: false
         readonly: false
-        usage: business # values: business, devops
-        data_assets_sent: internal-business-data # sequence of IDs to reference
-          - customer-accounts
-          - customer-operational-data
-          - internal-business-data
-        data_assets_received: customer-operational-data # sequence of IDs to reference
-          - customer-accounts
-          - customer-operational-data
-          - customer-contracts
-          - internal-business-data
-        #diagram_tweak_weight: 5
-        #diagram_tweak_constraint: false
+        usage: business
+        data_assets_sent: internal-business-data
+        data_assets_received: customer-operational-data
       Auth Credential Check Traffic:
         target: identity-provider
         description: Link to the identity provider server
-        protocol: https # values: see help
-        authentication: credentials # values: none, credentials, session-id, token, client-certificate, two-factor
-        authorization: technical-user # values: none, technical-user, enduser-identity-propagation
-        tags:
+        protocol: https
+        authentication: credentials
+        authorization: technical-user
+        tags: null
         vpn: false
         ip_filtered: false
         readonly: false
-        usage: business # values: business, devops
-        data_assets_sent: customer-accounts # sequence of IDs to reference
-          - customer-accounts
-        data_assets_received: # sequence of IDs to reference
+        usage: business
+        data_assets_sent: customer-accounts
+        data_assets_received: null
