@@ -30,7 +30,7 @@ jobs:
         id: threagile
         uses: threagile/run-threagile-action@v1
         with:
-         model-file: 'threagile.yaml'
+         model-file: 'Threagile.yaml'
         # run: threagile Threagile.yaml  # Provide full path to the Threagile.yaml file
 
       - name: Archive Threagile Reports
