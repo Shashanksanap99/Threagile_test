@@ -22,12 +22,14 @@ jobs:
         run: |
           go install github.com/threagile/threagile@latest
 
+      - name: Navigate to Repository Directory
+        run: cd $GITHUB_WORKSPACE  # Ensure you're in the repository root
+
       - name: Run Threagile Analysis
-          cd ./Threagile.yaml
         run: threagile Threagile.yaml
 
       - name: Archive Threagile Reports
         uses: actions/upload-artifact@v2
         with:
           name: threagile-reports
-          path: threagile-reports
+          path: threagile_reports  # Update this path according to your report directory
