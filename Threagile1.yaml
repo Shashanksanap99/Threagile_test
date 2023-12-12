@@ -128,7 +128,7 @@ technical_assets:
     multi_tenant: false
     redundant: false
     custom_developed_parts: true
-    data_assets_processed: # sequence of IDs to reference
+    data_assets_processed: client-application-code # sequence of IDs to reference
       - customer-accounts
       - customer-operational-data
       - customer-contracts
@@ -153,11 +153,11 @@ technical_assets:
         ip_filtered: false
         readonly: false
         usage: business # values: business, devops
-        data_assets_sent: # sequence of IDs to reference
+        data_assets_sent: internal-business-data # sequence of IDs to reference
           - customer-accounts
           - customer-operational-data
           - internal-business-data
-        data_assets_received: # sequence of IDs to reference
+        data_assets_received: customer-operational-data # sequence of IDs to reference
           - customer-accounts
           - customer-operational-data
           - customer-contracts
@@ -175,6 +175,6 @@ technical_assets:
         ip_filtered: false
         readonly: false
         usage: business # values: business, devops
-        data_assets_sent: # sequence of IDs to reference
+        data_assets_sent: customer-accounts # sequence of IDs to reference
           - customer-accounts
         data_assets_received: # sequence of IDs to reference
